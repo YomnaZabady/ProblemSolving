@@ -19,12 +19,12 @@ public class DijkstraShortestPath {
         int [] shortestDistances = t.dijkstra(graph, 0);
         System.out.println(Arrays.toString(shortestDistances));
     }
-    public int[] dijkstra (int[][] graph, int node) {
+    public int[] dijkstra (int[][] graph, int src) {
         int[] distances = new int[graph.length];
         boolean[] taken = new boolean[graph.length];
 
         // instantiate list with all max except the source element
-        distances[0] = 0;
+        distances[src] = 0;
         for (int i = 1; i < distances.length; i++) {
             distances[i] = Integer.MAX_VALUE;
         }
